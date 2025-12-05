@@ -1,19 +1,39 @@
-# Wikipedia Data Analysis:
+# Wikipedia Data Analysis
 
 ## Project Overview
 
-This project focuses on **predicting the 'Depth'** of various Wikipedia language editions, a metric used to quantify the quality and collaborative health of a wiki. We aim to identify which factors—such as the number of active users, total edits, and administrative support—are the most significant drivers of a high-quality, well-maintained platform.
+This project explores Wikipedia language editions from two perspectives:
+
+1. **Quality vs Quantity Analysis**  
+   We analyze how each Wikipedia edition differs in content quantity (number of articles) and content quality (Depth score). The dataset is divided into four groups:  
+   - High Quantity – High Quality  
+   - High Quantity – Low Quality  
+   - Low Quantity – High Quality  
+   - Low Quantity – Low Quality  
 
 ## Data Source
 
-The raw data, `wikipedias.csv`, was collected via **web scraping** from a public list of Wikipedia statistics. It contains key metrics for over 300 language editions.
+The dataset `wikipedias.csv` was collected through web scraping from publicly available Wikipedia statistical resources.  
+It contains metrics for 300+ language editions, including articles, edits, admin count, user count, and Depth.
 
 ## Repository Structure
 
-- `[Your_Notebook_Name].ipynb`: Contains all code for data collection, cleaning, Exploratory Data Analysis (EDA), and predictive modeling.
-- `wikipedias.csv`: The raw dataset used for the analysis.
-- `.gitignore`: Specifies files to be excluded from version control (e.g., temporary checkpoint files).
+- **`Eda_on_wikipedias.ipynb`**  
+  Contains all steps: data scraping, cleaning, EDA, Quality vs Quantity classification, visualizations, and predictive modeling.
 
-## Target Variable
+- **`wikipedias.csv`**  
+  The raw dataset.
 
-- **Depth (Target)**: A Wikipedia metric calculated using the ratio of edits and non-article pages (talk pages, project pages) to the total number of articles. High depth indicates a strong, collaborative community.
+- **`results/` folder**  
+  Contains all exported visualizations such as:
+  - Histograms (Articles, Depth)
+  - Scatter plots (Articles vs Depth)
+  - Quadrant plots (Quality vs Quantity)
+  - Correlation heatmaps
+
+- **`.gitignore`**  
+  Used to exclude temporary files (e.g., `.ipynb_checkpoints/`).
+
+
+## Saved Visualizations to the Results Folder
+
